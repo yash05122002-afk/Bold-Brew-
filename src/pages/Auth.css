@@ -1,0 +1,191 @@
+/* ==========================================================================
+   Bold Brew — Complete Responsive Auth Stylesheet (Auth.css)
+   ========================================================================== */
+
+:root {
+  --espresso: #24150e;
+  --espresso-deep: #180e09;
+  --caramel: #c87941;
+  --caramel-hover: #b2652f;
+  --caramel-soft: rgba(200, 121, 65, 0.14);
+  --cream: #fbf7f2;
+  --parchment: #f3eadf;
+  --surface: #ffffff;
+  --text-main: #261912;
+  --text-muted: #6b584d;
+  --border-warm: #e5d7c6;
+  --shadow-lg: 0 22px 48px rgba(36, 21, 14, 0.12);
+  --radius-sm: 10px;
+  --radius-lg: 22px;
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.bb-page.auth-wrapper,
+.bb-page.auth-wrapper *,
+.bb-page.auth-wrapper *::before,
+.bb-page.auth-wrapper *::after {
+  box-sizing: border-box;
+}
+
+.bb-page.auth-wrapper {
+  font-family: var(--font-sans);
+  min-height: calc(100vh - 74px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3.5rem 1.25rem;
+  background: radial-gradient(circle at 80% 15%, #efe3d3 0%, var(--cream) 60%);
+  color: var(--text-main);
+}
+
+.bb-auth-box {
+  width: 100%;
+  max-width: 440px;
+  padding: 2.75rem 2.5rem;
+  background-color: var(--surface);
+  border: 1px solid var(--border-warm);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+}
+
+.bb-auth-box .hero-top-tag {
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  background-color: var(--parchment);
+  border: 1px solid var(--border-warm);
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--caramel-hover);
+  margin-bottom: 1rem;
+}
+
+.bb-auth-box h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3.2vw, 2.2rem);
+  font-weight: 800;
+  color: var(--espresso);
+  margin: 0 0 0.5rem;
+  line-height: 1.15;
+}
+
+.auth-desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin: 0 0 1.85rem;
+  line-height: 1.55;
+}
+
+/* ==========================================================================
+   FORM & INPUTS
+   ========================================================================== */
+.bb-auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.95rem;
+}
+
+.bb-auth-form input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background-color: var(--cream);
+  border: 1.5px solid var(--border-warm);
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--text-main);
+  transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bb-auth-form input::placeholder {
+  color: #938074;
+}
+
+.bb-auth-form input:focus {
+  outline: none;
+  background-color: var(--surface);
+  border-color: var(--caramel);
+  box-shadow: 0 0 0 3px var(--caramel-soft);
+}
+
+.btn-black.full {
+  width: 100%;
+  margin-top: 0.45rem;
+  padding: 0.9rem 1.5rem;
+  background-color: var(--espresso);
+  color: var(--surface);
+  border: none;
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 0.96rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
+  box-shadow: 0 8px 20px rgba(36, 21, 14, 0.2);
+}
+
+.btn-black.full:hover {
+  background-color: var(--caramel);
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px rgba(200, 121, 65, 0.3);
+}
+
+/* ==========================================================================
+   SWITCH LINK
+   ========================================================================== */
+.auth-switch {
+  margin: 1.5rem 0 0;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-warm);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.auth-switch button {
+  background: transparent;
+  border: none;
+  padding: 0.15rem 0.25rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--caramel-hover);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.auth-switch button:hover {
+  color: var(--espresso);
+}
+
+/* Accessible Focus States */
+.bb-page.auth-wrapper button:focus-visible,
+.bb-page.auth-wrapper input:focus-visible {
+  outline: 2px solid var(--caramel);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 480px) {
+  .bb-page.auth-wrapper {
+    padding: 2rem 1rem;
+    align-items: flex-start;
+  }
+
+  .bb-auth-box {
+    padding: 2rem 1.35rem;
+    border-radius: 18px;
+  }
+
+  .auth-desc {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+}

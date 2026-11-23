@@ -1,0 +1,345 @@
+/* ==========================================================================
+   Bold Brew — Responsive Navbar Stylesheet (Navbar.css)
+   ========================================================================== */
+
+:root {
+  --espresso: #24150e;
+  --espresso-deep: #180e09;
+  --caramel: #c87941;
+  --caramel-hover: #b2652f;
+  --cream: #fbf7f2;
+  --parchment: #f3eadf;
+  --surface: #ffffff;
+  --text-main: #261912;
+  --text-muted: #6b584d;
+  --border-warm: #e5d7c6;
+  --shadow-nav: 0 6px 24px rgba(36, 21, 14, 0.07);
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.bb-navbar,
+.bb-navbar *,
+.bb-navbar *::before,
+.bb-navbar *::after {
+  box-sizing: border-box;
+}
+
+.bb-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1100;
+  width: 100%;
+  font-family: var(--font-sans);
+  background-color: rgba(251, 247, 242, 0.96);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-warm);
+  box-shadow: var(--shadow-nav);
+}
+
+.bb-navbar .bb-nav-container {
+  position: relative;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0.9rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* ==========================================================================
+   BRAND LOGO
+   ========================================================================== */
+.bb-navbar .coffee-brand-logo.minimal {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--espresso);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.bb-navbar .minimal-icon {
+  font-size: 1.5rem;
+  color: var(--caramel);
+  line-height: 1;
+}
+
+.bb-navbar .minimal-title {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--espresso);
+  white-space: nowrap;
+}
+
+.bb-navbar .orange-dot {
+  color: var(--caramel);
+}
+
+/* ==========================================================================
+   NAVIGATION LINKS (Desktop)
+   ========================================================================== */
+.bb-navbar .bb-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.bb-navbar .bb-nav-links a {
+  position: relative;
+  text-decoration: none;
+  font-size: 0.94rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  padding: 0.35rem 0.2rem;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.bb-navbar .bb-nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: var(--caramel);
+  border-radius: 999px;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.22s ease;
+}
+
+.bb-navbar .bb-nav-links a:hover,
+.bb-navbar .bb-nav-links a.active {
+  color: var(--espresso);
+}
+
+.bb-navbar .bb-nav-links a.active::after,
+.bb-navbar .bb-nav-links a:hover::after {
+  transform: scaleX(1);
+}
+
+.bb-navbar .nav-slash {
+  color: var(--border-warm);
+  font-size: 0.85rem;
+  user-select: none;
+}
+
+/* ==========================================================================
+   RIGHT ACTIONS (SIGN IN, CART, HAMBURGER)
+   ========================================================================== */
+.bb-navbar .bb-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-shrink: 0;
+}
+
+.bb-navbar .bb-signin-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.52rem 1.1rem;
+  background-color: var(--espresso);
+  color: var(--surface);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  white-space: nowrap;
+  border-radius: 999px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.bb-navbar .bb-signin-btn:hover {
+  background-color: var(--caramel);
+  transform: translateY(-1px);
+}
+
+.bb-navbar .bb-cart-square {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.75rem;
+  background-color: var(--surface);
+  border: 1.5px solid var(--border-warm);
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: var(--espresso);
+  font-weight: 700;
+  white-space: nowrap;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.bb-navbar .bb-cart-square:hover {
+  border-color: var(--caramel);
+  background-color: var(--parchment);
+}
+
+.bb-navbar .bb-cart-square span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 0.3rem;
+  border-radius: 999px;
+  background-color: var(--caramel);
+  color: var(--surface);
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
+/* Hamburger Button (Hidden on Desktop) */
+.bb-navbar .bb-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background-color: var(--surface);
+  border: 1.5px solid var(--border-warm);
+  border-radius: 10px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.bb-navbar .bb-hamburger:hover {
+  border-color: var(--caramel);
+}
+
+.bb-navbar .bb-hamburger .bar {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: var(--espresso);
+  border-radius: 999px;
+  transition: transform 0.25s ease, opacity 0.2s ease;
+}
+
+.bb-navbar .bb-hamburger.active .bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.bb-navbar .bb-hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.bb-navbar .bb-hamburger.active .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Accessible Focus States */
+.bb-navbar a:focus-visible,
+.bb-navbar button:focus-visible {
+  outline: 2px solid var(--caramel);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+
+/* Tablet & Mobile Navigation Drawer (<= 860px) */
+@media (max-width: 860px) {
+  .bb-navbar .bb-hamburger {
+    display: inline-flex;
+  }
+
+  .bb-navbar .nav-slash {
+    display: none;
+  }
+
+  .bb-navbar .bb-nav-links {
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 0;
+    right: 0;
+    z-index: 1099;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.25rem;
+    padding: 0 1.25rem;
+    background-color: var(--surface);
+    border-bottom: 1px solid var(--border-warm);
+    box-shadow: var(--shadow-nav);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: max-height 0.28s ease, opacity 0.22s ease, padding 0.25s ease, visibility 0.25s ease;
+  }
+
+  .bb-navbar .bb-nav-links.open {
+    max-height: 340px;
+    padding: 0.85rem 1.25rem 1.15rem;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .bb-navbar .bb-nav-links a {
+    display: block;
+    padding: 0.7rem 0.9rem;
+    border-radius: 10px;
+    font-size: 0.98rem;
+  }
+
+  .bb-navbar .bb-nav-links a::after {
+    display: none;
+  }
+
+  .bb-navbar .bb-nav-links a:hover,
+  .bb-navbar .bb-nav-links a.active {
+    background-color: var(--parchment);
+    color: var(--espresso);
+  }
+}
+
+/* Small Mobile (<= 480px) */
+@media (max-width: 480px) {
+  .bb-navbar .bb-nav-container {
+    padding: 0.7rem 0.9rem;
+    gap: 0.5rem;
+  }
+
+  .bb-navbar .minimal-title {
+    font-size: 1.15rem;
+  }
+
+  .bb-navbar .minimal-icon {
+    font-size: 1.25rem;
+  }
+
+  .bb-navbar .bb-nav-actions {
+    gap: 0.45rem;
+  }
+
+  .bb-navbar .bb-signin-btn {
+    padding: 0.42rem 0.78rem;
+    font-size: 0.8rem;
+  }
+
+  .bb-navbar .bb-cart-square {
+    padding: 0.38rem 0.58rem;
+    font-size: 0.84rem;
+  }
+
+  .bb-navbar .bb-hamburger {
+    width: 36px;
+    height: 36px;
+  }
+}

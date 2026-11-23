@@ -1,0 +1,357 @@
+/* ==========================================================================
+   Bold Brew — Complete Responsive Footer Stylesheet (Footer.css)
+   ========================================================================== */
+
+:root {
+  --espresso: #24150e;
+  --espresso-deep: #180e09;
+  --caramel: #c87941;
+  --caramel-hover: #b2652f;
+  --surface: #ffffff;
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.coffee-footer,
+.coffee-footer *,
+.coffee-footer *::before,
+.coffee-footer *::after {
+  box-sizing: border-box;
+}
+
+.coffee-footer {
+  font-family: var(--font-sans);
+  background: linear-gradient(180deg, var(--espresso) 0%, var(--espresso-deep) 100%);
+  color: rgba(255, 255, 255, 0.84);
+  padding: 4.5rem 0 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  overflow-x: hidden;
+}
+
+.footer-container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ==========================================================================
+   4-COLUMN GRID
+   ========================================================================== */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.85fr 1fr 1.2fr;
+  gap: 2.75rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.footer-col {
+  min-width: 0;
+}
+
+/* Brand Column */
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: var(--surface);
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+
+.logo-bean {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--caramel);
+  font-size: 1.45rem;
+}
+
+.footer-bio {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.72);
+  margin: 0 0 1.4rem;
+}
+
+.footer-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.social-pill {
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: var(--surface);
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.social-pill:hover {
+  background-color: var(--caramel);
+  border-color: var(--caramel);
+  transform: translateY(-2px);
+}
+
+/* Headings */
+.footer-heading {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--surface);
+  margin: 0 0 1.15rem;
+}
+
+/* Explore Links */
+.footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.footer-links a {
+  display: inline-block;
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.74);
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #f3bd8d;
+  transform: translateX(3px);
+}
+
+/* Hours & Location */
+.footer-hours {
+  list-style: none;
+  margin: 0 0 1.15rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footer-hours li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.75rem;
+  font-size: 0.88rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.12);
+}
+
+.footer-hours span {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.footer-hours strong {
+  color: var(--surface);
+  font-weight: 600;
+  text-align: right;
+}
+
+.footer-address {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+/* Newsletter */
+.newsletter-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.74);
+  margin: 0 0 1rem;
+}
+
+.newsletter-text strong {
+  color: #f3bd8d;
+}
+
+.footer-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.footer-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.72rem 0.95rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 10px;
+  color: var(--surface);
+  font-family: inherit;
+  font-size: 0.9rem;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.footer-form input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-form input:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: var(--caramel);
+}
+
+.footer-submit-btn {
+  padding: 0.72rem 1.2rem;
+  background-color: var(--caramel);
+  color: var(--surface);
+  border: none;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-submit-btn:hover {
+  background-color: var(--caramel-hover);
+  transform: translateY(-1px);
+}
+
+.subscribe-success {
+  display: block;
+  margin-top: 0.75rem;
+  padding: 0.6rem 0.85rem;
+  background-color: rgba(46, 160, 88, 0.18);
+  border: 1px solid rgba(114, 219, 152, 0.35);
+  border-radius: 8px;
+  color: #a9f0c0;
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   BOTTOM COPYRIGHT & LEGAL BAR
+   ========================================================================== */
+.footer-bottom-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1.65rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-bottom-bar p {
+  margin: 0;
+}
+
+.footer-legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.footer-legal-links a {
+  color: rgba(255, 255, 255, 0.68);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-legal-links a:hover {
+  color: var(--surface);
+}
+
+.back-top-btn {
+  padding: 0.45rem 0.9rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  color: var(--surface);
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.back-top-btn:hover {
+  background-color: var(--caramel);
+  border-color: var(--caramel);
+}
+
+/* Accessible Focus States */
+.coffee-footer a:focus-visible,
+.coffee-footer button:focus-visible,
+.coffee-footer input:focus-visible {
+  outline: 2px solid var(--caramel);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+
+/* Tablet (<= 1024px) */
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2.25rem 2rem;
+  }
+}
+
+/* Mobile (<= 600px) */
+@media (max-width: 600px) {
+  .coffee-footer {
+    padding: 3.25rem 0 1.75rem;
+  }
+
+  .footer-container {
+    padding: 0 1.1rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding-bottom: 2.25rem;
+  }
+
+  .footer-form {
+    flex-direction: column;
+  }
+
+  .footer-submit-btn {
+    width: 100%;
+    padding: 0.8rem 1rem;
+  }
+
+  .footer-bottom-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.85rem;
+  }
+
+  .footer-legal-links {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+}
