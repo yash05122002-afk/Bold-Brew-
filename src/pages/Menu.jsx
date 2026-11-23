@@ -4,6 +4,11 @@ import './Menu.css';
 import cortado from '../images/Cortado.png';
 import chocolateMocha from '../images/Decadent Chocolate Mocha.png';
 
+import espressoMacchiato from '../images/Warm Espresso Macchiato coffee.png';
+import brazilianBeans from '../images/Rustic Coffee Beans and Burlap Sack.png';
+import almondCroissant from '../images/Golden Almond Croissant.png';
+import chocolateCroissant from '../images/Chocolate-Filled Powdered Croissant.png';
+import berryCroissant from '../images/Berry-Filled Croissant Delight.png';
 
 const Menu = ({ addToCart }) => {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -44,7 +49,7 @@ const Menu = ({ addToCart }) => {
       badge: 'Bestseller',
       isBean: false,
       desc: 'Slightly bitter, strong, rich and mildly creamy.',
-      img: 'src/images/Warm Espresso Macchiato coffee.png',
+      img:  espressoMacchiato,
     },
 
 
@@ -93,7 +98,7 @@ const Menu = ({ addToCart }) => {
       badge: 'Roaster Favorite',
       isBean: true,
       desc: 'Carefully roasted to bring out their natural sweetness, smooth chocolate notes, and delightful nutty aroma ',
-      img: 'src/images/Rustic Coffee Beans and Burlap Sack.png',
+      img: brazilianBeans,
     },
 
     {
@@ -171,7 +176,7 @@ const Menu = ({ addToCart }) => {
       badge: 'Fresh Warm',
       isBean: false,
       desc: 'Flaky 27-layer laminated brioche pastry filled with sweet almond cream and flaked almonds.',
-      img: 'src/images/Golden Almond Croissant.png',
+      img: almondCroissant,
     },
 
      {
@@ -187,7 +192,7 @@ const Menu = ({ addToCart }) => {
       badge: 'Fresh Warm',
       isBean: false,
       desc: 'A classic baked pastry made from buttery, yeast-leavened laminated dough wrapped around sticks of rich dark chocolate.',
-      img: 'src/images/Chocolate-Filled Powdered Croissant.png',
+      img: chocolateCroissant,
     },
 
      {
@@ -203,7 +208,7 @@ const Menu = ({ addToCart }) => {
       badge: 'Fresh Warm',
       isBean: false,
       desc: 'Golden, flaky pastry filled with rich mixed-berry pulp and finished with a generous dusting of icing sugar.',
-      img: 'src/images/Berry-Filled Croissant Delight.png',
+      img: berryCroissant,
     },
 
 
