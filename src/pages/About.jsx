@@ -2,6 +2,10 @@ import  { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './About.css';
 
+import coffeeDrumRoaster from '../images/coffeedrumroaster.png.png';
+import coffeeMachine from '../images/coffeemachine.png';
+
+
 const About = () => {
   const [activeStep, setActiveStep] = useState(0);
 
@@ -21,7 +25,7 @@ const About = () => {
       subtitle: 'THE ART OF FIRE & TIME',
       desc: 'Every morning, our head roaster profiles 15kg batches on a vintage cast-iron drum roaster. We track bean temperature to the exact second to caramelize natural sugars without ever scorching the delicate essential oils.',
       highlight: 'Roasted & Shipped Within 24 Hours',
-      img: 'src/images/coffeedrumroaster.png.png',
+      img:  coffeeDrumRoaster,
     },
     {
       step: '03',
@@ -37,7 +41,7 @@ const About = () => {
       subtitle: 'DIALED IN EVERY MORNING',
       desc: 'Before opening our doors at 7:00 AM, our baristas dial in grind size, water mineral balance, and extraction pressure. Whether it is a velvety Spanish Cortado or a V60 pour-over, every cup is poured with intention.',
       highlight: 'La Marzocco Precision Extraction',
-      img: 'src/images/coffeemachine.png',
+      img: coffeeMachine,
     },
   ];
 

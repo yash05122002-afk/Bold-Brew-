@@ -1,6 +1,11 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
+
+// Import local images
+import cortado from '../images/Cortado.png';
+import chocolateMocha from '../images/Decadent Chocolate Mocha.png';
+import dalgona from '../images/Marbled Dalgona Coffee Delight.png';
 
 const Home = ({ addToCart }) => {
   const [selectedTab, setSelectedTab] = useState('All');
@@ -16,7 +21,7 @@ const Home = ({ addToCart }) => {
       rating: '4.9',
       price: 150,
       desc: ' Made with Caramelized milk , Toasted walnut & Cocoa.',
-      img: 'src/images/Cortado.png',
+      img: cortado,
     },
     {
       id: 202,
@@ -49,7 +54,7 @@ const Home = ({ addToCart }) => {
       rating: '4.9',
       price: 70,
       desc: 'Serve hot in a clear glass mug, topped with whipped cream, chocolate drizzle and cocoa shavings.',
-      img: 'src/images/Decadent Chocolate Mocha.png',
+      img: chocolateMocha,
     },
     {
       id: 205,
@@ -71,7 +76,7 @@ const Home = ({ addToCart }) => {
       rating: '5.0',
       price: 100,
       desc: 'Serve in a transparent glass with chilled milk, ice cubes and a generous swirl of whipped coffee foam.',
-      img: 'src/images/Marbled Dalgona Coffee Delight.png',
+      img: dalgona,
     },
   ];
 
@@ -146,12 +151,12 @@ const Home = ({ addToCart }) => {
 
   return (
     <div className="artisan-home">
-      
+
       {/* 
           1. TITLE / EDITORIAL HERO SECTION*/}
       <section className="editorial-hero">
         <div className="hero-inner">
-          
+
           {/* Left Column: Title, Story & CTA */}
           <div className="hero-copy-col">
             <div className="roaster-pill">
@@ -198,12 +203,12 @@ const Home = ({ addToCart }) => {
           <div className="hero-visual-col">
             <div className="arch-image-frame">
               <img
-                src="src/images/Decadent Chocolate Mocha.png"
+                src={chocolateMocha}
                 alt="Barista Pouring Latte Art"
               />
             </div>
 
-           
+
 
             {/* Floating Card 1 */}
             <div className="floating-card bottom-right">
@@ -221,7 +226,7 @@ const Home = ({ addToCart }) => {
       {/* 2. FAMOUS COFFEE SECTION */}
       <section id="famous-coffees" className="artisan-section famous-bg">
         <div className="section-container">
-          
+
           <div className="famous-header-flex">
             <div>
               <span className="eyebrow-tag">SIGNATURE CREATIONS</span>
@@ -283,7 +288,7 @@ const Home = ({ addToCart }) => {
       ========================================================= */}
       <section className="artisan-section reviews-bg">
         <div className="section-container">
-          
+
           <div className="centered-header">
             <span className="eyebrow-tag">COMMUNITY LOVE</span>
             <h2 className="section-heading">Words From Coffee Lovers</h2>
@@ -329,7 +334,7 @@ const Home = ({ addToCart }) => {
       <section className="artisan-section feedback-bg">
         <div className="section-container">
           <div className="feedback-split-box">
-            
+
             {/* Left Side: Callout & Coffee Perks */}
             <div className="feedback-left-panel">
               <span className="eyebrow-tag light">YOUR TASTE MATTERS</span>

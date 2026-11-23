@@ -1,5 +1,9 @@
 import { useState } from 'react';
 import './Menu.css';
+// Import local images
+import cortado from '../images/Cortado.png';
+import chocolateMocha from '../images/Decadent Chocolate Mocha.png';
+
 
 const Menu = ({ addToCart }) => {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -24,7 +28,7 @@ const Menu = ({ addToCart }) => {
       badge: 'Bestseller',
       isBean: false,
       desc: 'Equal parts rich double ristretto and lightly sweetened condensed micro-foam.',
-      img: 'src/images/Cortado.png',
+      img: cortado,
     },
 
     {
@@ -152,7 +156,7 @@ const Menu = ({ addToCart }) => {
       badge: 'Roaster Favourite',
       isBean: false,
       desc: 'Serve hot in a clear glass mug, topped with whipped cream, chocolate drizzle and cocoa shavings.',
-      img: 'src/images/Decadent Chocolate Mocha.png',
+      img: chocolateMocha,
     },
     {
       id: 310,
